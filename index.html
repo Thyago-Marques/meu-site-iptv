@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV V3 - Adminstrável</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="img/logo-iptv.png" alt="Logo IPTV V3">
+            </div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>SUPORTE <br> 24 HORAS</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>E-MAIL <br> thyagoaraujoempresa@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>LIGUE-NOS <br> (62) 9 994874715</span>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <ul class="nav-links">
+                <li><a href="#inicio">INICIAL</a></li>
+                <li><a href="#planos">PLANOS</a></li>
+                <li><a href="https://wa.me/5562994874715?text=🎯%20Olá!%20Vi%20seu%20site%20e%20quero%20aproveitar%20meu%20TESTE%20GRÁTIS%20de%20IPTV.%20Pode%20me%20ajudar%20a%20ativar%20agora%3F" target="_blank" class="btn-test">FAÇA UM TESTE GRATUITO</a></li>
+                <li><a href="#duvidas">DÚVIDAS</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://ig.me/m/thyagoaraujo_mc" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.link/1cgrim" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="overlay"></div>
+        </section>
+        
+        <section id="inicio" class="secao-texto">
+          <div class="container">
+            <p>A busca por diversão em família acaba aqui! Descubra o universo do entretenimento sem limites com o nosso serviço de IPTV, a plataforma completa que se adapta a cada fase da sua vida. Cansado de procurar o que assistir? Deixe as crianças explorarem mundos mágicos, os jovens maratonarem as séries mais comentadas do momento e os adultos relaxarem com filmes e canais ao vivo de alta qualidade. Com um catálogo que impressiona, oferecemos mais de <strong>(5.022 séries)</strong> para devorar, mais de <strong>(14.836 filmes)</strong> que vão do clássico ao lançamento, e mais de <strong>(2.137 canais ao vivo)</strong>, com esporte, notícias e o melhor da TV, tudo em um só lugar. Não perca tempo, assine hoje e garanta a diversão completa para toda a família!</p>
+          </div>
+        </section>
+
+        <section id="planos" class="secao-planos">
+            <div class="container">
+                <h2 class="titulo-planos">CONHEÇA NOSSOS PLANOS</h2>
+                <div class="planos-container">
+                    <div class="plano-card">
+                        <h3 class="plano-titulo">Básico</h3>
+                        <ul class="plano-features">
+                            <li>1 Tela simultânea</li>
+                            <li>1 Mês de acesso</li>
+                            <li>Filmes e séries</li>
+                            <li>Canais de esporte</li>
+                        </ul>
+                        <div class="plano-price-container">
+                            <span class="plano-price">R$ 40,00</span>
+                            <span class="plano-periodo">Mensal</span>
+                        </div>
+                        <p class="plano-description">Perfeito para casal</p>
+                        <button class="btn-contratar" data-plano="Básico">Quero este plano</button>
+                    </div>
+
+                    <div class="plano-card">
+                        <h3 class="plano-titulo">Família</h3>
+                        <ul class="plano-features">
+                            <li>2 Telas simultâneas</li>
+                            <li>1 Mês de acesso</li>
+                            <li>Filmes e séries</li>
+                            <li>Canais de esporte</li>
+                        </ul>
+                        <div class="plano-price-container">
+                            <span class="plano-price">R$ 70,00</span>
+                            <span class="plano-periodo">Mensal</span>
+                        </div>
+                        <p class="plano-description">Ótimo para a família</p>
+                        <button class="btn-contratar" data-plano="Família">Quero este plano</button>
+                    </div>
+
+                    <div class="plano-card">
+                        <h3 class="plano-titulo">Premium</h3>
+                        <ul class="plano-features">
+                            <li>2 Telas simultâneas</li>
+                            <li>2 Meses de acesso</li>
+                            <li>Filmes e séries</li>
+                            <li>Canais de esporte</li>
+                        </ul>
+                        <div class="plano-price-container">
+                            <span class="plano-price">R$ 95,00</span>
+                            <span class="plano-periodo">Trimestral</span>
+                        </div>
+                        <p class="plano-description">Divida com amigos</p>
+                        <button class="btn-contratar" data-plano="Premium">Quero este plano</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="duvidas" class="secao-duvidas">
+            <div class="container">
+                <h2 class="titulo-duvidas">📌 Em caso de dúvidas:</h2>
+                <div class="duvidas-container">
+                    <div class="duvida-item">
+                        <p><strong>📱 O que é “tela”?</strong> → É um acesso simultâneo. Se comprar 2 telas, pode assistir em 2 aparelhos diferentes ao mesmo tempo.</p>
+                    </div>
+                    <div class="duvida-item">
+                        <p><strong>🔄 Posso trocar de aparelho?</strong> → Sim, desde que não exceda o número de telas contratadas.</p>
+                    </div>
+                    <div class="duvida-item">
+                        <p><strong>🌍 Funciona fora do Brasil?</strong> → Sim, com internet estável.</p>
+                    </div>
+                    <div class="duvida-item">
+                        <p><strong>📶 Qual a velocidade mínima de internet?</strong> → Recomendado pelo menos 10 Mbps para HD.</p>
+                    </div>
+                    <div class="duvida-item">
+                        <p><strong>💳 Formas de pagamento?</strong> → Pix, cartão ou transferência.</p>
+                    </div>
+                    <div class="duvida-item">
+                        <p><strong>🛠 Tem suporte?</strong> → Sim, atendimento rápido via WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IPTV V3. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5562994874715?text=Olá!%20Gostaria%20de%20falar%20sobre%20o%20serviço%20de%20IPTV.%20😊" target="_blank" class="whatsapp-btn" aria-label="Botão flutuante para Whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Script para a rolagem suave e fechamento do menu
+        document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const menuToggle = document.getElementById('menu-toggle');
+                
+                if (menuToggle && menuToggle.checked) {
+                    menuToggle.checked = false;
+                }
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Script para os botões de contratar planos via WhatsApp com mensagem personalizada
+        document.querySelectorAll('.btn-contratar').forEach(button => {
+            button.addEventListener('click', function() {
+                const plano = this.getAttribute('data-plano');
+                let emoji = "";
+
+                if (plano === "Básico") emoji = "📺";
+                if (plano === "Família") emoji = "👨‍👩‍👧‍👦";
+                if (plano === "Premium") emoji = "🌟";
+
+                const mensagem = `${emoji} Olá! Tenho interesse em contratar o plano ${plano}. Poderia me passar mais informações?`;
+                const urlWhatsApp = `https://wa.me/5562994874715?text=${encodeURIComponent(mensagem)}`;
+                
+                window.open(urlWhatsApp, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

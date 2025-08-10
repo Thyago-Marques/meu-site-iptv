@@ -1,0 +1,511 @@
+/* Importação de fontes e reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-blue: #0a0e20;
+    --primary-color: #2e3047;
+    --light-gray: #ccc;
+    --text-color: #fff;
+    --accent-color: #ff0000;
+    --header-bg-color: #0d0f22; 
+    --card-bg-color: #121524; 
+    --yellow-btn: #ffcc00;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--header-bg-color); 
+    color: var(--text-color); 
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilo do Cabeçalho */
+.main-header {
+    background-color: var(--header-bg-color); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; 
+}
+
+.logo img {
+    height: 40px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.info-item i {
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.info-item span {
+    line-height: 1.2;
+}
+
+/* Estilo da Barra de Navegação */
+.main-nav {
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--yellow-btn);
+}
+
+.btn-test {
+    background-color: var(--yellow-btn);
+    color: #000 !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--yellow-btn);
+}
+
+/* Estilo do menu hambúrguer */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Estilo da Seção Principal (Hero) */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    background-image: url('../img/banner.png');
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Estilo da nova seção com o texto */
+.secao-texto {
+    background-color: var(--header-bg-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.secao-texto p {
+    color: var(--text-color);
+    line-height: 1.8;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Estilo da Seção de Planos */
+.secao-planos {
+    background-color: var(--header-bg-color);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.titulo-planos {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.planos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.plano-card {
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    padding: 40px 30px;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.plano-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+.plano-titulo {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.plano-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+}
+
+.plano-features li {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.plano-features li::before {
+    content: "✓";
+    color: #25d366;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.plano-price-container {
+    margin-bottom: 20px;
+}
+
+.plano-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--yellow-btn);
+    display: block;
+    line-height: 1;
+}
+
+.plano-periodo {
+    font-size: 1rem;
+    color: var(--text-color);
+    display: block;
+}
+
+.plano-description {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #fff;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 15px;
+}
+
+.btn-contratar {
+    background-color: var(--yellow-btn);
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-contratar:hover {
+    background-color: #e0b800;
+}
+
+/* Estilo da Seção de Dúvidas */
+.secao-duvidas {
+    background-color: var(--header-bg-color);
+    padding: 80px 20px;
+}
+
+.titulo-duvidas {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.duvidas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+}
+
+.duvida-item {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    flex-basis: calc(50% - 10px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.duvida-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.duvida-item strong {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Estilo do rodapé */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Para telas de TV e monitores grandes (acima de 1200px) */
+@media (min-width: 1201px) {
+    .container {
+        padding: 0;
+    }
+}
+
+
+/* Para tablets e telas menores (entre 768px e 1024px) */
+@media (max-width: 1024px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-info {
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+    }
+
+    .secao-texto p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Para celulares e dispositivos muito pequenos (abaixo de 768px) */
+@media (max-width: 767px) {
+    .main-header {
+        padding: 10px 0;
+    }
+
+    .header-top {
+        padding: 10px 20px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+    }
+
+    .main-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    
+    /* Remoção das propriedades 'order' e 'margin' para garantir a ordem correta em telas pequenas */
+    .main-nav .btn-test {
+        margin-top: 0;
+    }
+
+    .main-nav .social-icons {
+        margin-top: 0;
+    }
+
+    .hero-section {
+        height: 250px; 
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+
+    .secao-texto {
+        padding: 30px 20px;
+    }
+
+    .secao-texto p {
+        font-size: 1rem;
+    }
+
+    .titulo-planos, .titulo-duvidas {
+        font-size: 2rem;
+    }
+
+    .planos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .plano-card {
+        width: 100%;
+    }
+
+    .plano-price {
+        font-size: 2.5rem;
+    }
+
+    .duvidas-container {
+        flex-direction: column;
+    }
+    
+    .duvida-item {
+        flex-basis: 100%;
+    }
+
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+}
+
+/* Para TVs e telas muito grandes (acima de 1920px) */
+@media (min-width: 1921px) {
+    .hero-section {
+        height: 50vh;
+    }
+}
